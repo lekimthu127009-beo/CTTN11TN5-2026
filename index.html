@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTTN 11TN5 - Chào mừng 95 năm Ngày thành lập Đoàn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Khai báo phông chữ Bolero-esque Honora từ máy người dùng */
+        @font-face {
+            font-family: 'BoleroHonora';
+            src: url('Bolero-esque Honora.otf') format('opentype');
+            font-display: swap;
+        }
+
+        /* Import Google Fonts bổ trợ cho nội dung văn bản */
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Class chuyên biệt cho phông chữ Bolero */
+        .font-bolero {
+            font-family: 'BoleroHonora', 'Be Vietnam Pro', sans-serif;
+            letter-spacing: 0.02em;
+        }
+
+        .flower-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .sticky-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Hiệu ứng gạch chân tiêu đề nghệ thuật màu Xanh Lá */
+        .title-underline::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #10b981, transparent);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Màu sắc rực rỡ cho Thanh Niên (Xanh lá sáng) */
+        .text-thanhnien {
+            color: #4ade80;
+            text-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
+        }
+
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.active {
+            max-height: 350px;
+        }
+
+        .bg-gradient-soft {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+        }
+
+        /* Animation cho ảnh thực tế */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header & Navigation -->
+    <nav class="fixed w-full z-50 sticky-nav border-b border-emerald-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-emerald-600 text-white p-2.5 rounded-xl shadow-lg shadow-emerald-200">
+                        <i class="fas fa-leaf text-lg"></i>
+                    </div>
+                    <span class="font-bolero text-2xl md:text-3xl font-bold tracking-tight text-emerald-900">CTTN 11TN5</span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-semibold text-slate-700">
+                    <a href="#home" class="hover:text-emerald-600 transition-colors">Trang chủ</a>
+                    <a href="#about" class="hover:text-emerald-600 transition-colors">Ý nghĩa</a>
+                    <a href="#gallery" class="hover:text-emerald-600 transition-colors">Thực tế</a>
+                    <a href="#flowers" class="hover:text-emerald-600 transition-colors">Các loài hoa</a>
+                    <a href="#care" class="hover:text-emerald-600 transition-colors">Chăm sóc</a>
+                </div>
+                <button class="md:hidden text-2xl p-2" id="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars text-emerald-800"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Content -->
+        <div id="mobile-menu" class="md:hidden bg-white px-4 pb-6 shadow-inner">
+            <a href="#home" class="block py-3 text-slate-700 font-semibold border-b border-slate-50">Trang chủ</a>
+            <a href="#about" class="block py-3 text-slate-700 font-semibold border-b border-slate-50">Ý nghĩa</a>
+            <a href="#gallery" class="block py-3 text-slate-700 font-semibold border-b border-slate-50">Thực tế</a>
+            <a href="#flowers" class="block py-3 text-slate-700 font-semibold border-b border-slate-50">Các loài hoa</a>
+            <a href="#care" class="block py-3 text-slate-700 font-semibold">Chăm sóc</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20">
+        <div class="hero-gradient min-h-[90vh] flex items-center justify-center text-center px-4">
+            <div class="max-w-5xl">
+                <span class="inline-block px-5 py-2 rounded-full bg-emerald-600 text-white text-[10px] md:text-xs font-bold mb-8 tracking-widest uppercase shadow-lg">
+                    Kỷ niệm 95 năm Ngày thành lập Đoàn (26/3/1931 - 2026)
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bolero text-white mb-6 leading-tight drop-shadow-md">
+                    Công Trình Thanh Niên <br class="hidden md:block">
+                    <span class="text-thanhnien">"Góc Xanh 11TN5"</span>
+                </h1>
+                <p class="text-lg md:text-xl text-emerald-50 mb-12 font-light tracking-wide italic opacity-90">
+                    Nơi hội tụ sức trẻ và tình yêu thiên nhiên
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#flowers" class="px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full font-bold transition-all shadow-xl shadow-emerald-900/20 transform hover:-translate-y-1">
+                        Khám phá bồn hoa
+                    </a>
+                    <a href="#gallery" class="px-10 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm rounded-full font-bold transition-all transform hover:-translate-y-1">
+                        Hình ảnh thực tế
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-4xl font-bolero font-bold text-emerald-900 mb-8">Mục đích & Ý nghĩa</h2>
+                <div class="space-y-6 text-slate-600 text-lg leading-relaxed text-justify">
+                    <p>
+                        Chào mừng cột mốc rực rỡ <strong>95 năm Ngày thành lập Đoàn TNCS Hồ Chí Minh</strong>, tập thể Chi đoàn 11TN5 đã chung tay xây dựng công trình bồn hoa thanh niên.
+                    </p>
+                    <p>
+                        Công trình là sự kết hợp giữa tri thức sinh học và tinh thần xung kích. Qua việc tự tay lựa chọn và chăm sóc những loài cây tiêu biểu, chúng mình muốn gửi gắm thông điệp về một thế hệ trẻ năng động, biết trân trọng giá trị lao động và bảo vệ môi trường.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                        <div class="flex flex-col items-center justify-center p-6 bg-gradient-soft rounded-2xl shadow-sm border border-emerald-50 text-center">
+                            <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-heart text-rose-500 text-xl"></i>
+                            </div>
+                            <span class="font-bold text-emerald-900">Tình yêu trường</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-6 bg-gradient-soft rounded-2xl shadow-sm border border-emerald-50 text-center">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-leaf text-emerald-600 text-xl"></i>
+                            </div>
+                            <span class="font-bold text-emerald-900">Ý thức sống xanh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-emerald-600 rounded-3xl opacity-5 group-hover:opacity-10 transition duration-500"></div>
+                    <div class="relative bg-white p-10 rounded-3xl shadow-2xl border border-emerald-50">
+                        <i class="fas fa-quote-left text-5xl text-emerald-50 absolute top-6 left-6"></i>
+                        <h3 class="text-2xl font-bolero font-bold text-emerald-800 mb-6 text-center relative z-10">Lời tự sự 11TN5</h3>
+                        <p class="text-slate-700 mb-8 text-center italic text-xl leading-relaxed relative z-10">
+                            "Mỗi bông hoa nở rộ là một lời khẳng định cho sức trẻ bền bỉ và khát khao cống hiến của chúng em cho mái trường thân yêu."
+                        </p>
+                        <div class="h-1 w-24 bg-emerald-100 mx-auto mb-6 rounded-full"></div>
+                        <p class="text-center font-bold text-emerald-600 uppercase tracking-widest text-sm">Ban chấp hành Chi đoàn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Realistic Gallery Section -->
+    <section id="gallery" class="py-24 bg-white px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bolero font-bold text-emerald-900 mb-6 title-underline">Nhật Ký Hoàn Thiện</h2>
+                <p class="text-slate-500 text-lg italic">Hình ảnh thực tế quá trình trồng và chăm sóc của tập thể lớp</p>
+            </div>
+            
+            <div class="relative max-w-5xl mx-auto reveal-on-scroll" id="scroll-reveal">
+                <!-- Main Featured Image -->
+                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group relative">
+                    <img src="https://i.postimg.cc/nV1Xgnqm/z7642787453953-98959a71c85fbc222848e011c0b1e325.jpg" alt="Khu vườn 11TN5 đang hoàn thiện" class="w-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    
+                    <!-- Caption Overlay -->
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-emerald-950/90 to-transparent p-10 pt-24 text-white">
+                        <span class="inline-block px-4 py-1 bg-emerald-500 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Giai đoạn hoàn thiện</span>
+                        <h3 class="text-2xl md:text-3xl font-bolero font-bold mb-2">Thành quả của sự đoàn kết</h3>
+                        <p class="text-emerald-100/80 font-light italic text-sm md:text-base">"Bức ảnh ghi lại khoảnh khắc khu vườn đã phủ kín sắc xanh, sẵn sàng chào mừng ngày lễ lớn."</p>
+                    </div>
+                </div>
+                
+                <!-- Floating Badge -->
+                <div class="absolute -top-6 -right-6 md:-top-10 md:-right-10 bg-white p-6 rounded-full shadow-xl hidden md:block animate-bounce">
+                    <div class="w-20 h-20 md:w-28 md:h-28 rounded-full border-4 border-dashed border-emerald-500 flex flex-col items-center justify-center text-center">
+                        <span class="text-emerald-600 font-bold text-lg md:text-2xl leading-none">95</span>
+                        <span class="text-[8px] md:text-[10px] uppercase font-bold text-slate-400">Năm Đoàn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flower Collection -->
+    <section id="flowers" class="py-24 bg-emerald-50/30 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-20">
+            <h2 class="text-4xl font-bolero font-bold text-emerald-900 mb-6 title-underline">Các Loài Cây Tiêu Biểu</h2>
+            <p class="text-slate-500 text-lg max-w-2xl mx-auto italic">Chi tiết các loài cây được Chi đoàn 11TN5 vun trồng</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            
+            <!-- 1: Hoa Giấy -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://i.postimg.cc/44WGPtsC/z7640652375739_83021d4c5d16aa46b342c7a9bca76ae5.jpg" alt="Hoa Giấy" class="w-full h-full object-cover transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bolero font-bold text-slate-800 mb-2">Hoa Giấy</h3>
+                    <p class="text-[10px] text-emerald-600 font-bold mb-4 uppercase tracking-widest italic">Bougainvillea</p>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Sức sống mãnh liệt, tượng trưng cho ý chí kiên cường của thanh niên.</p>
+                    <div class="flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full w-fit">
+                        <i class="fas fa-sun mr-2"></i> Ưa nắng trực tiếp
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2: Hoa Nhài -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://i.postimg.cc/RVqBDFVk/z7640652398979_fadc27bab7b08ccc885080d419a484ca.jpg" alt="Hoa Nhài" class="w-full h-full object-cover transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bolero font-bold text-slate-800 mb-2">Hoa Nhài</h3>
+                    <p class="text-[10px] text-emerald-600 font-bold mb-4 uppercase tracking-widest italic">Jasminum sambac</p>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Hương thơm thanh khiết đại diện cho tâm hồn học trò trong sáng.</p>
+                    <div class="flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full w-fit">
+                        <i class="fas fa-tint mr-2"></i> Độ ẩm trung bình
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3: Cây Cá Vàng -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://i.postimg.cc/J7p8xJMM/z7640652392577_e6f82e9bf8da8ce9459a0abd6d1e1ee3.jpg" alt="Cây Cá Vàng" class="w-full h-full object-cover transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bolero font-bold text-slate-800 mb-2">Cây Cá Vàng</h3>
+                    <p class="text-[10px] text-emerald-600 font-bold mb-4 uppercase tracking-widest italic">Nematanthus</p>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Hình dáng độc đáo mang lại sự vui tươi cho bồn hoa nghệ thuật.</p>
+                    <div class="flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full w-fit">
+                        <i class="fas fa-cloud-sun mr-2"></i> Nắng tán xạ
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4: Dứa Mỹ -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://i.postimg.cc/66MKcRwk/z7640652382013_5adec45e2a29c691cc78bc150467fa1a.jpg" alt="Dứa Mỹ" class="w-full h-full object-cover transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bolero font-bold text-slate-800 mb-2">Dứa Mỹ (Agave)</h3>
+                    <p class="text-[10px] text-emerald-600 font-bold mb-4 uppercase tracking-widest italic">Agave americana</p>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Sự cứng cáp của lá dứa mỹ là biểu tượng cho ý chí vững vàng.</p>
+                    <div class="flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full w-fit">
+                        <i class="fas fa-shield-alt mr-2"></i> Chịu hạn tốt
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5: Kim Đồng Vàng -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://i.postimg.cc/G3XRKYrZ/z7640652378711_2047160f9ae9ffb216c6becf02de5b2a.jpg" alt="Kim Đồng Vàng" class="w-full h-full object-cover transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bolero font-bold text-slate-800 mb-2">Kim Đồng Vàng</h3>
+                    <p class="text-[10px] text-emerald-600 font-bold mb-4 uppercase tracking-widest italic">Galphimia glauca</p>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Sắc vàng rực rỡ tượng trưng cho năng lượng tràn đầy của lớp trẻ.</p>
+                    <div class="flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full w-fit">
+                        <i class="fas fa-certificate mr-2"></i> Nở hoa thường xuyên
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6: Cẩm Tú Mai -->
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://i.postimg.cc/L4xSDfRz/z7640652353800_c978cb486652faef40fea388bd23c3ff.jpg" alt="Cẩm Tú Mai" class="w-full h-full object-cover transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bolero font-bold text-slate-800 mb-2">Cẩm Tú Mai</h3>
+                    <p class="text-[10px] text-emerald-600 font-bold mb-4 uppercase tracking-widest italic">Cuphea</p>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Hoa tím nhỏ nhắn kết thành thảm, làm nền cho bồn hoa thêm duyên dáng.</p>
+                    <div class="flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full w-fit">
+                        <i class="fas fa-th-large mr-2"></i> Cây trồng viền
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Care Guide Section -->
+    <section id="care" class="py-24 px-4 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bolero font-bold text-emerald-900 mb-6 title-underline">Cẩm Nang Chăm Sóc</h2>
+                <p class="text-slate-500 text-lg italic">Ghi chép từ nhật ký của các thành viên 11TN5</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-emerald-50 p-10 rounded-[2rem] shadow-sm border border-emerald-100 hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-emerald-600 p-4 rounded-2xl mr-6 text-white shadow-lg shadow-emerald-200">
+                            <i class="fas fa-faucet text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-emerald-900 uppercase tracking-wide">Lịch tưới nước</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        Tưới nước vào lúc <strong>7:00 sáng</strong> và <strong>4:30 chiều</strong> hàng ngày để cây phát triển tốt nhất.
+                    </p>
+                </div>
+
+                <div class="bg-emerald-50 p-10 rounded-[2rem] shadow-sm border border-emerald-100 hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-emerald-600 p-4 rounded-2xl mr-6 text-white shadow-lg shadow-emerald-200">
+                            <i class="fas fa-broom text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-emerald-900 uppercase tracking-wide">Vệ sinh bồn hoa</h4>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        Mỗi cuối tuần, tập thể lớp cùng nhặt lá úa và nhổ cỏ dại để giữ cảnh quan sạch đẹp.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-white py-20 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center md:text-left">
+            <div class="md:col-span-1">
+                <h2 class="text-3xl font-bolero font-bold mb-6 text-emerald-400">CTTN 11TN5</h2>
+                <p class="text-emerald-100/70 leading-relaxed mb-8">Công trình thanh niên chào mừng kỷ niệm 95 năm thành lập Đoàn TNCS Hồ Chí Minh.</p>
+                <div class="flex justify-center md:justify-start space-x-6 text-2xl">
+                    <a href="#" class="text-emerald-400 hover:text-emerald-200 transition-all"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-emerald-400 hover:text-emerald-200 transition-all"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="md:col-span-1 space-y-5">
+                <h4 class="font-bold text-xl border-b border-emerald-800 pb-3 mb-4 text-emerald-300">Thông tin</h4>
+                <p class="text-emerald-100/80"><i class="fas fa-school mr-4 text-emerald-400"></i> Trường THPT Chê Ghê va-ra</p>
+                <p class="text-emerald-100/80"><i class="fas fa-user-friends mr-4 text-emerald-400"></i> Chi đoàn 11TN5</p>
+                <p class="text-emerald-100/80 text-sm"><i class="fas fa-envelope mr-4 text-emerald-400"></i> thptcheguevara@bentre.edu.vn</p>
+            </div>
+            <div class="md:col-span-1">
+                <h4 class="font-bold text-xl border-b border-emerald-800 pb-3 mb-4 text-emerald-300">Kỷ niệm</h4>
+                <div class="mt-4 p-6 bg-emerald-900/50 rounded-2xl border border-emerald-800/50 backdrop-blur-sm">
+                    <p class="text-xs text-emerald-400 uppercase tracking-widest mb-1">Người thực hiện:</p>
+                    <p class="font-bolero text-2xl text-white">Lê Kim Thư</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-emerald-900/50 text-center text-[10px] text-emerald-700 uppercase tracking-[0.3em]">
+            &copy; 2026 CTTN 11TN5 - 95 năm sức trẻ Việt Nam.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Simple Reveal Animation on Scroll
+        const revealElement = document.getElementById('scroll-reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(revealElement);
+    </script>
+</body>
+</html>
