@@ -7,14 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Khai báo phông chữ Bolero-esque Honora từ máy người dùng */
+       
         @font-face {
             font-family: 'BoleroHonora';
             src: url('Bolero-esque Honora.otf') format('opentype');
             font-display: swap;
         }
 
-        /* Import Google Fonts bổ trợ cho nội dung văn bản */
+
         @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap');
         
         body {
@@ -22,7 +22,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Class chuyên biệt cho phông chữ Bolero */
+
         .font-bolero {
             font-family: 'BoleroHonora', 'Be Vietnam Pro', sans-serif;
             letter-spacing: 0.02em;
@@ -43,7 +43,7 @@
             background-color: rgba(255, 255, 255, 0.9);
         }
 
-        /* Hiệu ứng gạch chân tiêu đề nghệ thuật màu Xanh Lá */
+
         .title-underline::after {
             content: '';
             display: block;
@@ -54,13 +54,13 @@
             border-radius: 2px;
         }
 
-        /* Màu sắc rực rỡ cho Thanh Niên (Xanh lá sáng) */
+
         .text-thanhnien {
             color: #4ade80;
             text-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
         }
 
-        /* Mobile Menu */
+
         #mobile-menu {
             transition: all 0.3s ease-in-out;
             max-height: 0;
@@ -74,7 +74,7 @@
             background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
         }
 
-        /* Animation cho ảnh thực tế */
+   
         .reveal-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -88,7 +88,7 @@
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <!-- Header & Navigation -->
+
     <nav class="fixed w-full z-50 sticky-nav border-b border-emerald-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -110,7 +110,7 @@
                 </button>
             </div>
         </div>
-        <!-- Mobile Nav Content -->
+      
         <div id="mobile-menu" class="md:hidden bg-white px-4 pb-6 shadow-inner">
             <a href="#home" class="block py-3 text-slate-700 font-semibold border-b border-slate-50">Trang chủ</a>
             <a href="#about" class="block py-3 text-slate-700 font-semibold border-b border-slate-50">Ý nghĩa</a>
@@ -120,7 +120,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    
     <section id="home" class="pt-20">
         <div class="hero-gradient min-h-[90vh] flex items-center justify-center text-center px-4">
             <div class="max-w-5xl">
@@ -146,7 +146,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-24 px-4 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1">
@@ -191,7 +190,7 @@
         </div>
     </section>
 
-    <!-- NEW: Realistic Gallery Section -->
+
     <section id="gallery" class="py-24 bg-white px-4 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
@@ -204,7 +203,7 @@
                 <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group relative">
                     <img src="https://i.postimg.cc/nV1Xgnqm/z7642787453953-98959a71c85fbc222848e011c0b1e325.jpg" alt="Khu vườn 11TN5 đang hoàn thiện" class="w-full object-cover transition-transform duration-1000 group-hover:scale-105">
                     
-                    <!-- Caption Overlay -->
+    
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-emerald-950/90 to-transparent p-10 pt-24 text-white">
                         <span class="inline-block px-4 py-1 bg-emerald-500 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Giai đoạn hoàn thiện</span>
                         <h3 class="text-2xl md:text-3xl font-bolero font-bold mb-2">Thành quả của sự đoàn kết</h3>
@@ -212,7 +211,7 @@
                     </div>
                 </div>
                 
-                <!-- Floating Badge -->
+
                 <div class="absolute -top-6 -right-6 md:-top-10 md:-right-10 bg-white p-6 rounded-full shadow-xl hidden md:block animate-bounce">
                     <div class="w-20 h-20 md:w-28 md:h-28 rounded-full border-4 border-dashed border-emerald-500 flex flex-col items-center justify-center text-center">
                         <span class="text-emerald-600 font-bold text-lg md:text-2xl leading-none">95</span>
@@ -223,7 +222,7 @@
         </div>
     </section>
 
-    <!-- Flower Collection -->
+
     <section id="flowers" class="py-24 bg-emerald-50/30 px-4">
         <div class="max-w-7xl mx-auto text-center mb-20">
             <h2 class="text-4xl font-bolero font-bold text-emerald-900 mb-6 title-underline">Các Loài Cây Tiêu Biểu</h2>
@@ -247,7 +246,7 @@
                 </div>
             </div>
 
-            <!-- 2: Hoa Nhài -->
+
             <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
                 <div class="h-64 overflow-hidden">
                     <img src="https://i.postimg.cc/RVqBDFVk/z7640652398979_fadc27bab7b08ccc885080d419a484ca.jpg" alt="Hoa Nhài" class="w-full h-full object-cover transition-transform duration-700">
@@ -262,7 +261,7 @@
                 </div>
             </div>
 
-            <!-- 3: Cây Cá Vàng -->
+
             <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
                 <div class="h-64 overflow-hidden">
                     <img src="https://i.postimg.cc/J7p8xJMM/z7640652392577_e6f82e9bf8da8ce9459a0abd6d1e1ee3.jpg" alt="Cây Cá Vàng" class="w-full h-full object-cover transition-transform duration-700">
@@ -277,7 +276,6 @@
                 </div>
             </div>
 
-            <!-- 4: Dứa Mỹ -->
             <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
                 <div class="h-64 overflow-hidden">
                     <img src="https://i.postimg.cc/66MKcRwk/z7640652382013_5adec45e2a29c691cc78bc150467fa1a.jpg" alt="Dứa Mỹ" class="w-full h-full object-cover transition-transform duration-700">
@@ -292,7 +290,6 @@
                 </div>
             </div>
 
-            <!-- 5: Kim Đồng Vàng -->
             <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
                 <div class="h-64 overflow-hidden">
                     <img src="https://i.postimg.cc/G3XRKYrZ/z7640652378711_2047160f9ae9ffb216c6becf02de5b2a.jpg" alt="Kim Đồng Vàng" class="w-full h-full object-cover transition-transform duration-700">
@@ -307,7 +304,6 @@
                 </div>
             </div>
 
-            <!-- 6: Cẩm Tú Mai -->
             <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flower-card border border-emerald-50">
                 <div class="h-64 overflow-hidden">
                     <img src="https://i.postimg.cc/L4xSDfRz/z7640652353800_c978cb486652faef40fea388bd23c3ff.jpg" alt="Cẩm Tú Mai" class="w-full h-full object-cover transition-transform duration-700">
@@ -325,7 +321,7 @@
         </div>
     </section>
 
-    <!-- Care Guide Section -->
+
     <section id="care" class="py-24 px-4 bg-white">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
@@ -361,16 +357,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-emerald-950 text-white py-20 px-4">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 text-center md:text-left">
             <div class="md:col-span-1">
                 <h2 class="text-3xl font-bolero font-bold mb-6 text-emerald-400">CTTN 11TN5</h2>
                 <p class="text-emerald-100/70 leading-relaxed mb-8">Công trình thanh niên chào mừng kỷ niệm 95 năm thành lập Đoàn TNCS Hồ Chí Minh.</p>
-                <div class="flex justify-center md:justify-start space-x-6 text-2xl">
-                    <a href="#" class="text-emerald-400 hover:text-emerald-200 transition-all"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-emerald-400 hover:text-emerald-200 transition-all"><i class="fab fa-instagram"></i></a>
-                </div>
+                <!-- Social Icons removed as requested -->
             </div>
             <div class="md:col-span-1 space-y-5">
                 <h4 class="font-bold text-xl border-b border-emerald-800 pb-3 mb-4 text-emerald-300">Thông tin</h4>
@@ -392,7 +384,7 @@
     </footer>
 
     <script>
-        // Smooth scroll
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -405,7 +397,7 @@
             });
         });
 
-        // Mobile Menu
+
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
@@ -418,7 +410,7 @@
             });
         });
 
-        // Simple Reveal Animation on Scroll
+
         const revealElement = document.getElementById('scroll-reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -428,7 +420,9 @@
             });
         }, { threshold: 0.1 });
         
-        observer.observe(revealElement);
+        if (revealElement) {
+            observer.observe(revealElement);
+        }
     </script>
 </body>
 </html>
